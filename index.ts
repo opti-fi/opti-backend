@@ -17,29 +17,29 @@ app.use(express.json());
 
 const MOCK_TOKENS = {
   UNI: {
-    token: "",
-    staking: "",
+    token: "0x1eaC9BB63f8673906dBb75874356E33Ab7d5D780",
+    staking: "0xa42A86906D3FDfFE7ccc1a4E143e5Ddd8dF0Cf83",
     nameProject: "Uniswap"
   },
   USDC: {
-    token: "",
-    staking: "",
+    token: "0x0E8Ac3cc5183A243FcbA007136135A14831fDA99",
+    staking: "0x5dC10711C60dd5174306aEC6Fb1c78b895C9fA5A",
     nameProject: "AaveV3"
   },
   USDT: {
-    token: "",
-    staking: "",
+    token: "0xbF1876d7643a1d7DA52C7B8a67e7D86aeeAA12A6",
+    staking: "0xD1b1954896009800dF01b197A6E8E1d98FF44ae8",
     nameProject: "CompoundV3"
   },
   DAI: {
-    token: "",
-    staking: "",
-    nameProject: "UsdxMoney"
+    token: "0xD1d25fc5faC3cd5EE2daFE6292C5DFC16057D4d1",
+    staking: "0x0CAf83Ef2BA9242F174FCE98E30B9ceba299aaa3",
+    nameProject: "StargateV3"
   },
   WETH: {
-    token: "",
-    staking: "",
-    nameProject: "StargateV3"
+    token: "0x134C06B12eA6b1c7419a08085E0de6bDA9A16dA2",
+    staking: "0x6c36eD76d3FF0A7C0309aef473052b487895Fadf",
+    nameProject: "UsdxMoney"
   }
 };
 
@@ -80,7 +80,7 @@ async function updateStakingData(tokenKey: keyof typeof MOCK_TOKENS) {
         addressStaking: staking,
         nameToken: tokenKey,
         nameProject: MOCK_TOKENS[tokenKey].nameProject,
-        chain: "Arbitrum Sepolia",
+        chain: "Base Sepolia",
         apy: formattedAPY,
         stablecoin: tokenKey === "USDC" || tokenKey === "USDT" ? true : false,
         categories: ["Staking", tokenKey === "USDC" || tokenKey === "USDT" ? "Stablecoin" : ""].filter(Boolean),

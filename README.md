@@ -27,6 +27,7 @@ A simple Node.js API using Express, Prisma, and Ethers.js to fetch and update st
 3. Set up your `.env` file:
    ```env
    PORT=3000
+   DATABASE_URL=your_database_url_here
    RPC_URL=your_rpc_url_here
    ```
 4. Run the server:
